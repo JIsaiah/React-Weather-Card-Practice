@@ -1,23 +1,23 @@
 import React from "react";
 import styled from "@emotion/styled";
 
-const Condition = (props) => {
+const Condition = ({ temp, condition }) => {
   const Temp = styled.h1`
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-      sans-serif;
+    font-family: "Varela Round";
     font-size: 2rem;
   `;
 
   const State = styled.h3`
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-      sans-serif;
+    font-family: "Varela Round";
     font-size: 1.2rem;
+    text-align: center;
+    padding: 15px;
   `;
 
   return (
     <>
-      <Temp>20°C</Temp>
-      <State className="condition">Cloudy</State>
+      <Temp>{temp}°C</Temp>
+      <State>{condition}</State>
     </>
   );
 };

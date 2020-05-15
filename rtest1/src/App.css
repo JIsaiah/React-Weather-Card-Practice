@@ -1,4 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
 .App {
   margin: 0 auto;
   color: white;
+}
+
+.locInput {
+  padding: 10px;
+}
+
+.inputBox {
+  border-radius: 15px;
+  border-color: grey;
+  font-family: "Varela Round";
+  padding: 2px;
+}
+
+.searchButton {
+  border-radius: 15px;
+  border-color: grey;
+  font-family: "Varela Round";
+  width: 65px;
+  height: 20px;
 }
