@@ -11,7 +11,7 @@ function App() {
     country: null,
   });
 
-  const data = async (q) => {
+  const getWeather = async (q) => {
     const apiRes = await fetch(
       `http://api.openweathermap.org/data/2.5/weather?q=${q}&units=metric&APPID=48e45a11c46dd5e755bafd526ebf1188`
     );
@@ -21,7 +21,7 @@ function App() {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    data(query).then((res) => {
+    getWeather(query).then((res) => {
       setWeather({
         temp: res.main.temp,
         city: res.name,
@@ -32,7 +32,7 @@ function App() {
   };
 
   useEffect(() => {
-    data(query).then((res) => {
+    getWeather(query).then((res) => {
       setWeather({
         temp: res.main.temp,
         city: res.name,
